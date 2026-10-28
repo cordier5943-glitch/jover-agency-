@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jover Agency | Photographe événementiel, mariage et corporate à Lille</title>
+<meta name="description" content="Photographe à Lille : événements, mariages et photos pour les professionnels. Des images vivantes, sincères et sans pose forcée.">
+<meta name="theme-color" content="#B31917">
+<meta property="og:title" content="Jover Agency | Photographe à Lille">
+<meta property="og:description" content="Événements, mariages et photos pour les professionnels.">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#B31917;--cream:#FFF1E2;--ink:#1A0605;--dark:#7E100F}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--red);color:var(--cream);font:400 1.125rem/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3,.big{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.02;letter-spacing:.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cream);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+section{padding:4.5rem 0}
+svg.ic{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.2em}
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1.5rem;padding:3rem 1.5rem;position:relative;overflow:hidden}
+.btn{position:absolute;top:1.25rem;right:1.25rem;background:var(--cream);color:var(--red);font-weight:700;text-decoration:none;padding:.6rem 1.1rem;border-radius:99px;transform:rotate(3deg);transition:transform .2s}
+.btn:hover{transform:rotate(-2deg) scale(1.05)}
+.logo{font-family:Anton,sans-serif;font-size:clamp(5rem,22vw,12rem);line-height:.9;color:var(--cream);letter-spacing:.02em}
+.logo small{display:block;font-size:clamp(1rem,3.4vw,1.8rem);letter-spacing:.5em;color:var(--ink);margin-top:.4rem}
+.hero h1{font-size:clamp(2rem,7vw,4.5rem);max-width:14ch}
+.hero p.sub{font-size:clamp(1rem,2.4vw,1.4rem);max-width:30ch;font-weight:700}
+.doodles{display:flex;gap:1.6rem;flex-wrap:wrap;justify-content:center;font-size:2.2rem}
+.doodles svg{width:1em;height:1em;stroke:var(--cream);transform:rotate(-6deg)}
+.doodles svg:nth-child(even){transform:rotate(7deg)}
+.hero .lift{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+/* about */
+.about{background:var(--cream);color:var(--ink)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about h2{font-size:clamp(2rem,5vw,3.4rem);color:var(--red);margin-bottom:1.2rem}
+.about p{max-width:34em}
+.about strong{color:var(--red)}
+.portrait{border:10px solid var(--red);border-radius:50% 50% 8px 8px;overflow:hidden;aspect-ratio:1;transform:rotate(2deg)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1)}
+/* promesse */
+.promise{text-align:center}
+.promise .big{font-size:clamp(2rem,6vw,4rem);max-width:18ch;margin:0 auto 1.5rem}
+.promise p{max-width:36em;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem;text-align:left}
+.card{background:var(--dark);padding:1.8rem;border-radius:18px}
+.card h3{font-size:1.8rem;margin:.5rem 0}
+.card p{font-size:1rem}
+/* galerie */
+.gallery h2,.refs h2{font-size:clamp(2rem,5vw,3.4rem);text-align:center;margin-bottom:2.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.9rem}
+.ph{aspect-ratio:4/5;border:2px dashed rgba(255,241,226,.55);border-radius:14px;display:grid;place-items:center;text-align:center;font-size:.9rem;color:rgba(255,241,226,.75);background:rgba(0,0,0,.12)}
+.ph:nth-child(3n+2){aspect-ratio:1}
+.ph:nth-child(5n){aspect-ratio:3/4}
+.ph svg{width:2.2rem;height:2.2rem;display:block;margin:0 auto .4rem}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
+.more{text-align:center;margin-top:2.5rem;font-weight:700}
+/* refs */
+.refs{background:var(--ink)}
+.refs .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
+.slot{aspect-ratio:3/2;border:2px dashed rgba(255,241,226,.35);border-radius:14px;display:grid;place-items:center;font-size:.85rem;color:rgba(255,241,226,.6)}
+.refs p.note{text-align:center;margin-top:1.8rem;color:rgba(255,241,226,.8)}
+/* footer */
+footer{padding:4rem 0 3rem;text-align:center}
+footer .big{font-size:clamp(2.2rem,8vw,5.5rem);margin-bottom:1.5rem}
+.contact{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.contact a{display:inline-flex;align-items:center;gap:.6rem;background:var(--cream);color:var(--red);font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:99px}
+.contact a:hover{background:#fff}
+footer small{display:block;opacity:.8;font-size:.9rem}
+@media(max-width:800px){.about .wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.portrait{max-width:380px;margin:0 auto}section{padding:3.2rem 0}}
+@media(prefers-reduced-motion:reduce){.hero .lift{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <a class="btn" href="mailto:contact@jover.agency">ÉCRIS-MOI !</a>
+  <div class="doodles lift" aria-hidden="true">
+    <!-- appareil photo -->
+    <svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+    <!-- coupe de champagne -->
+    <svg viewBox="0 0 24 24" class="ic"><path d="M7 3h10c0 5-2 8-5 8S7 8 7 3z"/><path d="M12 11v9M8 21h8"/></svg>
+    <!-- alliances -->
+    <svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="14" r="5"/><circle cx="16" cy="14" r="5"/><path d="M9 6l1.5-3L12 6"/></svg>
+    <!-- flash -->
+    <svg viewBox="0 0 24 24" class="ic"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>
+  </div>
+  <div class="logo lift" style="animation-delay:.1s">JOVER<small>AGENCY</small></div>
+  <h1 class="lift" style="animation-delay:.2s">PHOTOGRAPHE ÉVÉNEMENTIEL</h1>
+  <p class="sub lift" style="animation-delay:.3s">JE CAPTURE LES SOURIRES, LA FÊTE ET LES INSTANTS QUI COMPTENT.</p>
+</header>
+
+<section class="about" id="a-propos">
+  <div class="wrap">
+    <div>
+      <h2>Photographe à Lille</h2>
+      <p>Je photographie les <strong>émotions</strong>, les <strong>rencontres</strong> et l'<strong>énergie</strong> des moments que vous organisez : soirées, mariages, événements d'entreprise.</p>
+      <p style="margin-top:1rem">Pas de poses figées. Je me glisse dans l'ambiance pour garder des images naturelles, vivantes, qui ressemblent à ce que vous avez vécu.</p>
+    </div>
+    <div class="portrait"><img src="pics/jover.webp" alt="Portrait de Jover, photographe" width="800" height="800"></div>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="wrap">
+    <p class="big">JE DÉFENDS UNE PHOTOGRAPHIE SINCÈRE, SANS FILTRE.</p>
+    <p>MA PROMESSE : des <strong>images vraies</strong>, pensées pour votre événement et pour l'usage que vous en ferez, de l'album de famille à la communication de votre marque.</p>
+    <div class="cards">
+      <article class="card">
+        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M12 3l2.5 6 6.5.5-5 4.3 1.6 6.4L12 16.8 6.4 20.2 8 13.8 3 9.5 9.5 9z"/></svg>
+        <h3>Événementiel</h3>
+        <p>Soirées, concerts, lancements, séminaires : je couvre l'événement du début à la fin et je livre les moments forts.</p>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <h3>Mariage</h3>
+        <p>Préparatifs, cérémonie, fête : des souvenirs spontanés, racontés comme ils se sont passés.</p>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg>
+        <h3>Professionnels</h3>
+        <p>Portraits d'équipe, photos de marque et contenus pour vos réseaux et votre site.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="galerie">
+  <div class="wrap">
+    <h2>Un aperçu de mon univers</h2>
+    <div class="grid">
+      <!-- Pour chaque emplacement : remplace le <div class="ph">…</div> par <img src="pics/gallery/photo-01.jpg" alt="description"> -->
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 1</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 2</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 3</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 4</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 5</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 6</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 7</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 8</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 9</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 10</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 11</span></div>
+      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 12</span></div>
+    </div>
+    <p class="more">et bien plus sur <a href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener">@jover.agency</a></p>
+  </div>
+</section>
+
+<section class="refs" id="references">
+  <div class="wrap">
+    <h2>Ils me font confiance</h2>
+    <div class="logos">
+      <!-- Remplace chaque .slot par <a href="https://instagram.com/client"><img src="pics/clients/client.webp" alt="Nom du client"></a> -->
+      <div class="slot">Logo client</div><div class="slot">Logo client</div><div class="slot">Logo client</div>
+      <div class="slot">Logo client</div><div class="slot">Logo client</div><div class="slot">Logo client</div>
+    </div>
+    <p class="note">Mes premières références arrivent bientôt. Et si c'était la vôtre ?</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="big">T'EN VEUX PLUS ?</p>
+    <div class="contact">
+      <a href="mailto:contact@jover.agency"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>contact@jover.agency</a>
+      <a href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>@jover.agency</a>
+    </div>
+    <small>© Jover Agency · Lille</small>
+  </div>
+</footer>
+
+</body>
+</html>
