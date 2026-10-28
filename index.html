@@ -3,178 +3,337 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jover Agency | Photographe événementiel, mariage et corporate à Lille</title>
-<meta name="description" content="Photographe à Lille : événements, mariages et photos pour les professionnels. Des images vivantes, sincères et sans pose forcée.">
-<meta name="theme-color" content="#B31917">
-<meta property="og:title" content="Jover Agency | Photographe à Lille">
-<meta property="og:description" content="Événements, mariages et photos pour les professionnels.">
+<title>Jover | Photographe événementiel, mariage et professionnels à Lille</title>
+<meta name="description" content="Jover, photographe à Lille et dans le Nord-Pas-de-Calais : mariages, événements et photos pour les professionnels. Des images authentiques, au plus près de l'instant.">
+<meta property="og:title" content="Jover | Photographe à Lille">
+<meta property="og:description" content="Mariages, événements et photos pour les professionnels, à Lille et dans le Nord-Pas-de-Calais.">
+<meta property="og:image" content="pics/logo-dark.png">
 <meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="pics/favicon.png">
+<link rel="apple-touch-icon" href="pics/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Mulish:wght@400;600&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
 <style>
-:root{--red:#B31917;--cream:#FFF1E2;--ink:#1A0605;--dark:#7E100F}
+:root{
+  --ink:#4D504A;      /* titres */
+  --text:#84847C;     /* texte courant */
+  --sand:#F3EEEA;     /* bandeaux clairs */
+  --stone:#8A8A82;    /* bandeau gris */
+  --line:#DCD6D0;
+  --white:#fff;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--red);color:var(--cream);font:400 1.125rem/1.6 "DM Sans",system-ui,sans-serif}
-h1,h2,h3,.big{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.02;letter-spacing:.01em}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--cream);outline-offset:3px}
-.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-section{padding:4.5rem 0}
-svg.ic{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.2em}
-/* hero */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1.5rem;padding:3rem 1.5rem;position:relative;overflow:hidden}
-.btn{position:absolute;top:1.25rem;right:1.25rem;background:var(--cream);color:var(--red);font-weight:700;text-decoration:none;padding:.6rem 1.1rem;border-radius:99px;transform:rotate(3deg);transition:transform .2s}
-.btn:hover{transform:rotate(-2deg) scale(1.05)}
-.logo{font-family:Anton,sans-serif;font-size:clamp(5rem,22vw,12rem);line-height:.9;color:var(--cream);letter-spacing:.02em}
-.logo small{display:block;font-size:clamp(1rem,3.4vw,1.8rem);letter-spacing:.5em;color:var(--ink);margin-top:.4rem}
-.hero h1{font-size:clamp(2rem,7vw,4.5rem);max-width:14ch}
-.hero p.sub{font-size:clamp(1rem,2.4vw,1.4rem);max-width:30ch;font-weight:700}
-.doodles{display:flex;gap:1.6rem;flex-wrap:wrap;justify-content:center;font-size:2.2rem}
-.doodles svg{width:1em;height:1em;stroke:var(--cream);transform:rotate(-6deg)}
-.doodles svg:nth-child(even){transform:rotate(7deg)}
-.hero .lift{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
-@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-/* about */
-.about{background:var(--cream);color:var(--ink)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.about h2{font-size:clamp(2rem,5vw,3.4rem);color:var(--red);margin-bottom:1.2rem}
-.about p{max-width:34em}
-.about strong{color:var(--red)}
-.portrait{border:10px solid var(--red);border-radius:50% 50% 8px 8px;overflow:hidden;aspect-ratio:1;transform:rotate(2deg)}
-.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1)}
-/* promesse */
-.promise{text-align:center}
-.promise .big{font-size:clamp(2rem,6vw,4rem);max-width:18ch;margin:0 auto 1.5rem}
-.promise p{max-width:36em;margin:0 auto}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem;text-align:left}
-.card{background:var(--dark);padding:1.8rem;border-radius:18px}
-.card h3{font-size:1.8rem;margin:.5rem 0}
-.card p{font-size:1rem}
-/* galerie */
-.gallery h2,.refs h2{font-size:clamp(2rem,5vw,3.4rem);text-align:center;margin-bottom:2.5rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.9rem}
-.ph{aspect-ratio:4/5;border:2px dashed rgba(255,241,226,.55);border-radius:14px;display:grid;place-items:center;text-align:center;font-size:.9rem;color:rgba(255,241,226,.75);background:rgba(0,0,0,.12)}
-.ph:nth-child(3n+2){aspect-ratio:1}
-.ph:nth-child(5n){aspect-ratio:3/4}
-.ph svg{width:2.2rem;height:2.2rem;display:block;margin:0 auto .4rem}
-.grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
-.more{text-align:center;margin-top:2.5rem;font-weight:700}
-/* refs */
-.refs{background:var(--ink)}
-.refs .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
-.slot{aspect-ratio:3/2;border:2px dashed rgba(255,241,226,.35);border-radius:14px;display:grid;place-items:center;font-size:.85rem;color:rgba(255,241,226,.6)}
-.refs p.note{text-align:center;margin-top:1.8rem;color:rgba(255,241,226,.8)}
-/* footer */
-footer{padding:4rem 0 3rem;text-align:center}
-footer .big{font-size:clamp(2.2rem,8vw,5.5rem);margin-bottom:1.5rem}
-.contact{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.contact a{display:inline-flex;align-items:center;gap:.6rem;background:var(--cream);color:var(--red);font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:99px}
-.contact a:hover{background:#fff}
-footer small{display:block;opacity:.8;font-size:.9rem}
-@media(max-width:800px){.about .wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.portrait{max-width:380px;margin:0 auto}section{padding:3.2rem 0}}
-@media(prefers-reduced-motion:reduce){.hero .lift{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+body{background:var(--white);color:var(--text);font:300 1rem/1.75 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;text-transform:uppercase;color:var(--ink);letter-spacing:.18em;line-height:1.25}
+.kicker{font-family:Mulish,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 2rem}
+section{padding:7rem 0}
+
+.btn{display:inline-block;font-family:Mulish,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);padding:1.1rem 2.4rem;transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--white)}
+
+/* ---------- en-tête ---------- */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.scrolled{border-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:92px}
+.top .brand img{height:62px;width:auto}
+.menu{display:flex;gap:2.6rem;list-style:none}
+.menu a{font-family:Mulish,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);padding:.4rem 0;border-bottom:1px solid transparent;transition:border-color .3s}
+.menu a:hover{border-color:var(--ink)}
+.burger{display:none;background:none;border:0;width:34px;height:24px;position:relative;cursor:pointer}
+.burger span,.burger::before,.burger::after{content:"";position:absolute;left:0;right:0;height:1px;background:var(--ink);transition:transform .3s,opacity .3s}
+.burger::before{top:2px}.burger span{top:11px}.burger::after{top:20px}
+.open .burger::before{transform:translateY(9px) rotate(45deg)}
+.open .burger span{opacity:0}
+.open .burger::after{transform:translateY(-9px) rotate(-45deg)}
+
+/* ---------- héro ---------- */
+.hero{padding:4rem 0 7rem}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5vw,4.2rem);margin:1.4rem 0 1.6rem}
+.hero h1 em{display:block;font-style:italic;text-transform:none;letter-spacing:.02em}
+.hero p{max-width:30em;margin-bottom:2.6rem}
+.hero figure{position:relative}
+.hero figure::before{content:"";position:absolute;inset:2.2rem -2.2rem -2.2rem 2.2rem;background:var(--sand);z-index:-1}
+.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;filter:grayscale(1) contrast(1.05)}
+.social{display:flex;gap:1.6rem;margin-top:3rem}
+.social a{color:var(--ink);opacity:.8;transition:opacity .3s}
+.social a:hover{opacity:1}
+.social svg{width:18px;height:18px}
+
+/* ---------- authenticité ---------- */
+.intro{text-align:center;padding-top:3rem}
+.intro h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin:1rem 0 1.8rem}
+.intro p{max-width:40em;margin:0 auto}
+
+/* ---------- portfolio ---------- */
+.folio{padding-top:2rem}
+.folio .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;align-items:start}
+.folio .item:nth-child(2){margin-top:7rem}
+.folio .item:nth-child(3){margin-top:3.5rem}
+.ph{position:relative;aspect-ratio:3/4;background:var(--sand);display:grid;place-items:center;overflow:hidden}
+.ph::after{content:"";position:absolute;inset:14px;border:1px solid rgba(77,80,74,.18)}
+.ph span{font-family:Mulish,sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:#b2aca5;text-align:center}
+.ph svg{width:30px;height:30px;stroke:#b2aca5;fill:none;stroke-width:1.2;display:block;margin:0 auto .8rem}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.item a:hover .ph img{transform:scale(1.04)}
+.item .kicker{display:block;margin-top:1.4rem;color:var(--text);font-size:.62rem}
+.item h3{font-size:1.5rem;margin-top:.3rem}
+.item p{margin-top:.6rem;font-size:.95rem}
+
+/* ---------- zone ---------- */
+.zone{padding:5rem 0 0}
+.zone p.serif{font-size:clamp(1.15rem,2vw,1.45rem);max-width:46em;letter-spacing:.14em}
+.band{background:var(--sand);padding:6rem 0;text-align:center}
+.band p.serif{font-size:clamp(1.3rem,2.6vw,1.9rem);max-width:24em;margin:0 auto}
+
+/* ---------- déroulé ---------- */
+.steps .wrap{max-width:980px}
+.steps h2{font-size:clamp(1.6rem,3vw,2.2rem);text-align:center;margin-bottom:4.5rem}
+.step{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:center;padding:2.5rem 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .num{font-family:Mulish,sans-serif;font-size:.62rem;letter-spacing:.3em;color:var(--text)}
+.step h3{font-size:clamp(1.8rem,3.4vw,2.6rem);display:inline-block;border-bottom:1px solid var(--ink);padding-bottom:.2rem;margin-top:.2rem}
+.step p{max-width:32em}
+
+/* ---------- à propos ---------- */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:5rem;align-items:center}
+.about .logo-big{max-width:340px;margin:0 auto}
+.about h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:1rem 0 1.6rem}
+.about p+p{margin-top:1.1rem}
+
+/* ---------- histoires ---------- */
+.stories{text-align:center;padding-top:2rem}
+.stories h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.stories .sub{font-style:italic;margin:.6rem 0 3.5rem}
+.stories .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.stories .ph{aspect-ratio:1}
+.stories .ph:nth-child(even){aspect-ratio:1}
+.stories .more{margin-top:3rem}
+
+/* ---------- contact ---------- */
+.cta{background:var(--stone);color:var(--white);text-align:center;padding:7rem 0}
+.cta .serif{color:var(--white);font-size:clamp(1.5rem,3vw,2.3rem);max-width:22em;margin:0 auto 2.8rem}
+.cta .btn{color:var(--white);border-color:var(--white)}
+.cta .btn:hover{background:var(--white);color:var(--ink)}
+
+footer{padding:4.5rem 0 3rem;text-align:center}
+footer .flogo{width:150px;margin:0 auto 2rem}
+footer .links{display:flex;justify-content:center;gap:2.4rem;flex-wrap:wrap;margin-bottom:2.4rem}
+footer .links a{display:inline-flex;align-items:center;gap:.7rem;font-family:Mulish,sans-serif;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink)}
+footer .links svg{width:16px;height:16px}
+footer small{font-size:.8rem;letter-spacing:.06em}
+
+.ic{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* révélation douce au défilement, une seule fois */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .menu{position:fixed;inset:92px 0 auto 0;flex-direction:column;align-items:center;gap:1.8rem;background:var(--white);padding:2.5rem 0 3rem;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .4s ease;z-index:-1}
+  .open .menu{transform:none}
+  .burger{display:block}
+  .hero .wrap,.about .wrap{grid-template-columns:1fr;gap:4rem}
+  .hero figure{max-width:440px;margin:0 2.2rem 0 0}
+  .folio .grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .folio .item:nth-child(n){margin-top:0}
+  .folio .item:nth-child(2){margin-top:4rem}
+  .step{grid-template-columns:1fr;gap:1rem}
+  .stories .grid{grid-template-columns:1fr 1fr}
+  section{padding:5rem 0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 1.25rem}
+  .top .wrap{height:76px}
+  .top .brand img{height:50px}
+  .menu{inset:76px 0 auto 0}
+  .folio .grid{grid-template-columns:1fr}
+  .folio .item:nth-child(2){margin-top:0}
+  .hero figure::before{inset:1.4rem -1.4rem -1.4rem 1.4rem}
+  .hero figure{margin-right:1.4rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .menu,.btn,.ph img{transition:none}
+}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <a class="btn" href="mailto:contact@jover.agency">ÉCRIS-MOI !</a>
-  <div class="doodles lift" aria-hidden="true">
-    <!-- appareil photo -->
-    <svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
-    <!-- coupe de champagne -->
-    <svg viewBox="0 0 24 24" class="ic"><path d="M7 3h10c0 5-2 8-5 8S7 8 7 3z"/><path d="M12 11v9M8 21h8"/></svg>
-    <!-- alliances -->
-    <svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="14" r="5"/><circle cx="16" cy="14" r="5"/><path d="M9 6l1.5-3L12 6"/></svg>
-    <!-- flash -->
-    <svg viewBox="0 0 24 24" class="ic"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil" aria-label="Jover, retour à l'accueil"><img src="pics/logo-dark.png" alt="Jover" width="800" height="547"></a>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#histoires">Galerie</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
   </div>
-  <div class="logo lift" style="animation-delay:.1s">JOVER<small>AGENCY</small></div>
-  <h1 class="lift" style="animation-delay:.2s">PHOTOGRAPHE ÉVÉNEMENTIEL</h1>
-  <p class="sub lift" style="animation-delay:.3s">JE CAPTURE LES SOURIRES, LA FÊTE ET LES INSTANTS QUI COMPTENT.</p>
 </header>
 
-<section class="about" id="a-propos">
+<main>
+
+<section class="hero" id="accueil">
   <div class="wrap">
     <div>
-      <h2>Photographe à Lille</h2>
-      <p>Je photographie les <strong>émotions</strong>, les <strong>rencontres</strong> et l'<strong>énergie</strong> des moments que vous organisez : soirées, mariages, événements d'entreprise.</p>
-      <p style="margin-top:1rem">Pas de poses figées. Je me glisse dans l'ambiance pour garder des images naturelles, vivantes, qui ressemblent à ce que vous avez vécu.</p>
+      <span class="kicker">Photographe à Lille</span>
+      <h1 class="serif">Inspiré par l'instant <em>créé pour vous</em></h1>
+      <p>Mariages, événements, entreprises : je capture les émotions telles qu'elles se vivent, sans poses figées, pour vous offrir des souvenirs qui vous ressemblent.</p>
+      <a class="btn" href="#portfolio">Découvrir</a>
+      <div class="social">
+        <a href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener" aria-label="Instagram @jover.agency">
+          <svg viewBox="0 0 24 24" class="ic"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg>
+        </a>
+        <a href="mailto:contact@jover.agency" aria-label="Écrire à contact@jover.agency">
+          <svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+      </div>
     </div>
-    <div class="portrait"><img src="pics/jover.webp" alt="Portrait de Jover, photographe" width="800" height="800"></div>
+    <figure><img src="pics/jover.webp" alt="Portrait de Jover, photographe à Lille" width="800" height="800"></figure>
   </div>
 </section>
 
-<section class="promise">
+<section class="intro reveal">
   <div class="wrap">
-    <p class="big">JE DÉFENDS UNE PHOTOGRAPHIE SINCÈRE, SANS FILTRE.</p>
-    <p>MA PROMESSE : des <strong>images vraies</strong>, pensées pour votre événement et pour l'usage que vous en ferez, de l'album de famille à la communication de votre marque.</p>
-    <div class="cards">
-      <article class="card">
-        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M12 3l2.5 6 6.5.5-5 4.3 1.6 6.4L12 16.8 6.4 20.2 8 13.8 3 9.5 9.5 9z"/></svg>
-        <h3>Événementiel</h3>
-        <p>Soirées, concerts, lancements, séminaires : je couvre l'événement du début à la fin et je livre les moments forts.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
-        <h3>Mariage</h3>
-        <p>Préparatifs, cérémonie, fête : des souvenirs spontanés, racontés comme ils se sont passés.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg>
-        <h3>Professionnels</h3>
-        <p>Portraits d'équipe, photos de marque et contenus pour vos réseaux et votre site.</p>
-      </article>
-    </div>
+    <span class="kicker">Mon approche</span>
+    <h2 class="serif">Photos authentiques</h2>
+    <p>Une belle photo, c'est un moment qu'on revit à chaque fois qu'on la regarde. Je me fonds dans votre journée pour saisir les rires, les regards et les détails qui la rendent unique. Des images sincères, pensées pour durer.</p>
   </div>
 </section>
 
-<section class="gallery" id="galerie">
+<section class="folio" id="portfolio">
   <div class="wrap">
-    <h2>Un aperçu de mon univers</h2>
     <div class="grid">
-      <!-- Pour chaque emplacement : remplace le <div class="ph">…</div> par <img src="pics/gallery/photo-01.jpg" alt="description"> -->
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 1</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 2</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 3</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 4</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 5</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 6</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 7</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 8</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 9</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 10</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 11</span></div>
-      <div class="ph"><span><svg viewBox="0 0 24 24" class="ic"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Photo 12</span></div>
+      <!-- Pour ajouter une photo : place <img src="pics/gallery/mariage.jpg" alt="…"> dans le .ph correspondant -->
+      <article class="item reveal">
+        <div class="ph"><span><svg viewBox="0 0 24 24"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/></svg>Photo à venir</span></div>
+        <span class="kicker">Portfolio</span>
+        <h3 class="serif">Mariage</h3>
+        <p>Des préparatifs à la dernière danse, votre histoire racontée avec douceur.</p>
+      </article>
+      <article class="item reveal">
+        <div class="ph"><span><svg viewBox="0 0 24 24"><path d="M7 3h10c0 5-2 8-5 8S7 8 7 3z"/><path d="M12 11v9M8 21h8"/></svg>Photo à venir</span></div>
+        <span class="kicker">Portfolio</span>
+        <h3 class="serif">Événementiel</h3>
+        <p>Soirées, concerts, lancements : l'énergie de vos événements, du début à la fin.</p>
+      </article>
+      <article class="item reveal">
+        <div class="ph"><span><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M9 7V4h6v3"/></svg>Photo à venir</span></div>
+        <span class="kicker">Portfolio</span>
+        <h3 class="serif">Professionnels</h3>
+        <p>Portraits, équipes et images de marque pour votre site et vos réseaux.</p>
+      </article>
     </div>
-    <p class="more">et bien plus sur <a href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener">@jover.agency</a></p>
   </div>
 </section>
 
-<section class="refs" id="references">
+<div class="zone reveal">
   <div class="wrap">
-    <h2>Ils me font confiance</h2>
-    <div class="logos">
-      <!-- Remplace chaque .slot par <a href="https://instagram.com/client"><img src="pics/clients/client.webp" alt="Nom du client"></a> -->
-      <div class="slot">Logo client</div><div class="slot">Logo client</div><div class="slot">Logo client</div>
-      <div class="slot">Logo client</div><div class="slot">Logo client</div><div class="slot">Logo client</div>
+    <p class="serif">Photographe dans le Nord-Pas-de-Calais, je me déplace partout pour vous : à Lille, dans toute la région… et au-delà.</p>
+  </div>
+</div>
+
+<section class="band reveal" style="margin-top:4rem">
+  <p class="serif">Vivez pleinement votre journée, je m'occupe de préserver vos souvenirs.</p>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2 class="serif reveal">Le jour J, du premier au dernier instant</h2>
+    <div class="step reveal">
+      <div><span class="num">01</span><br><h3 class="serif">Préparatifs</h3></div>
+      <p>L'effervescence du matin, les derniers ajustements, les émotions qui montent. Ces instants discrets donnent le ton de toute la journée.</p>
     </div>
-    <p class="note">Mes premières références arrivent bientôt. Et si c'était la vôtre ?</p>
+    <div class="step reveal">
+      <div><span class="num">02</span><br><h3 class="serif">Cérémonie</h3></div>
+      <p>Les regards, les mains qui tremblent, les larmes de joie. Je reste en retrait pour ne rien perturber et ne rien manquer.</p>
+    </div>
+    <div class="step reveal">
+      <div><span class="num">03</span><br><h3 class="serif">Réception</h3></div>
+      <p>Vos proches, les retrouvailles, les détails que vous avez choisis avec soin. Tout ce qui fait l'ambiance de votre fête.</p>
+    </div>
+    <div class="step reveal">
+      <div><span class="num">04</span><br><h3 class="serif">Soirée</h3></div>
+      <p>La première danse, les éclats de rire, la piste qui s'enflamme. L'énergie de la nuit, capturée sur le vif.</p>
+    </div>
   </div>
 </section>
 
-<footer id="contact">
+<section class="about" id="apropos" style="background:var(--sand)">
   <div class="wrap">
-    <p class="big">T'EN VEUX PLUS ?</p>
-    <div class="contact">
-      <a href="mailto:contact@jover.agency"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>contact@jover.agency</a>
-      <a href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>@jover.agency</a>
+    <img class="logo-big reveal" src="pics/logo-dark.png" alt="" width="800" height="547">
+    <div class="reveal">
+      <span class="kicker">À propos</span>
+      <h2 class="serif">Moi, c'est Jover</h2>
+      <p>Photographe basé à Lille, j'aime les gens, les fêtes et les moments qui ne se rejouent pas. Mon objectif : que vous oubliiez l'appareil, pour que vos photos gardent toute leur spontanéité.</p>
+      <p>Que ce soit pour votre mariage, un événement ou l'image de votre entreprise, je vous accompagne avec écoute et bonne humeur, et je vous livre des photos soignées, prêtes à être partagées.</p>
     </div>
-    <small>© Jover Agency · Lille</small>
+  </div>
+</section>
+
+<section class="stories" id="histoires">
+  <div class="wrap">
+    <h2 class="serif reveal">Vos histoires en images</h2>
+    <p class="sub reveal">Mes derniers shootings arrivent très prochainement</p>
+    <div class="grid reveal">
+      <div class="ph"><span>Photo à venir</span></div>
+      <div class="ph"><span>Photo à venir</span></div>
+      <div class="ph"><span>Photo à venir</span></div>
+      <div class="ph"><span>Photo à venir</span></div>
+      <div class="ph"><span>Photo à venir</span></div>
+      <div class="ph"><span>Photo à venir</span></div>
+      <div class="ph"><span>Photo à venir</span></div>
+      <div class="ph"><span>Photo à venir</span></div>
+    </div>
+    <div class="more"><a class="btn" href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener">Suivre @jover.agency</a></div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <p class="serif">Vous recherchez un photographe dans le Nord-Pas-de-Calais ?</p>
+    <a class="btn" href="mailto:contact@jover.agency">Contactez-moi</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="flogo" src="pics/logo-dark.png" alt="Jover" width="800" height="547">
+    <div class="links">
+      <a href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg>@jover.agency</a>
+      <a href="mailto:contact@jover.agency"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>contact@jover.agency</a>
+    </div>
+    <small>© <span id="y">2026</span> Jover, photographe à Lille</small>
   </div>
 </footer>
 
+<script>
+  // menu mobile
+  const top=document.getElementById('top'),burger=top.querySelector('.burger');
+  burger.addEventListener('click',()=>{const o=top.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  top.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>{top.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+  // filet sous l'en-tête au défilement
+  addEventListener('scroll',()=>top.classList.toggle('scrolled',scrollY>10),{passive:true});
+  // apparition des sections
+  const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
+  document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
+  document.getElementById('y').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
