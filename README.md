@@ -62,5 +62,5 @@ Demander à Claude :
 > Ce que je veux : …
 
 Chaque envoi sur la branche `main` republie le site en une à deux minutes
-(GitHub → Settings → Pages → Source : **Deploy from a branch**, `main`, `/ (root)` ;
-le fichier `.github/workflows/pages.yml` relance la publication automatiquement).
+(GitHub → Settings → Pages → Source : **GitHub Actions** ; c'est le fichier
+`.github/workflows/pages.yml` qui publie le site).
