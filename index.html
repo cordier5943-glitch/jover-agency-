@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jover | Photographe événementiel, mariage et professionnels à Lille</title>
 <meta name="description" content="Jover, photographe à Lille et dans le Nord-Pas-de-Calais : mariages, événements et photos pour les professionnels. Des images authentiques, au plus près de l'instant.">
@@ -10,8 +11,9 @@
 <meta property="og:image" content="pics/photos/og-partage.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" href="pics/favicon.png">
-<link rel="apple-touch-icon" href="pics/favicon.png">
+<link rel="icon" href="pics/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="pics/apple-touch-icon.png">
+<link rel="preload" as="image" href="pics/jover.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Mulish:wght@400;600&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
@@ -28,6 +30,9 @@
 html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--text);font:300 1rem/1.75 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
+picture{display:block}
+.shot picture,.band picture{position:absolute;inset:0}
+.shot{background:var(--sand)}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:1px solid var(--ink);outline-offset:4px}
 
@@ -87,6 +92,7 @@ section{padding:7rem 0}
 .shot img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
 .shot:hover img{transform:scale(1.04)}
 .folio .shot{aspect-ratio:3/4}
+.stories .shot,.step .shot{position:relative}
 .item .kicker{display:block;margin-top:1.4rem;color:var(--text);font-size:.62rem}
 .item h3{font-size:1.5rem;margin-top:.3rem}
 .item p{margin-top:.6rem;font-size:.95rem}
@@ -142,8 +148,8 @@ footer small{font-size:.8rem;letter-spacing:.06em}
 .ic{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
 /* révélation douce au défilement, une seule fois */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
-.reveal.in{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
 
 @media (max-width:960px){
   .menu{position:fixed;inset:92px 0 auto 0;flex-direction:column;align-items:center;gap:1.8rem;background:var(--white);padding:2.5rem 0 3rem;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .4s ease;z-index:-1}
@@ -171,7 +177,7 @@ footer small{font-size:.8rem;letter-spacing:.06em}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
   .menu,.btn,.ph img{transition:none}
 }
 </style>
@@ -180,7 +186,7 @@ footer small{font-size:.8rem;letter-spacing:.06em}
 
 <header class="top" id="top">
   <div class="wrap">
-    <a class="brand" href="#accueil" aria-label="Jover, retour à l'accueil"><img src="pics/logo-dark.png" alt="Jover" width="800" height="547"></a>
+    <a class="brand" href="#accueil" aria-label="Jover, retour à l'accueil"><picture><source type="image/avif" srcset="pics/logo-180.avif 1x, pics/logo-360.avif 2x"><img src="pics/logo-180.webp" srcset="pics/logo-180.webp 1x, pics/logo-360.webp 2x" alt="Jover" width="180" height="123" fetchpriority="high"></picture></a>
     <nav aria-label="Navigation principale">
       <ul class="menu" id="menu">
         <li><a href="#accueil">Accueil</a></li>
@@ -212,7 +218,7 @@ footer small{font-size:.8rem;letter-spacing:.06em}
         </a>
       </div>
     </div>
-    <figure><img src="pics/jover.webp" alt="Portrait de Jover, photographe à Lille" width="800" height="800"></figure>
+    <figure><img src="pics/jover.webp" alt="Portrait de Jover, photographe à Lille" width="800" height="800" fetchpriority="high" decoding="async"></figure>
   </div>
 </section>
 
@@ -228,19 +234,19 @@ footer small{font-size:.8rem;letter-spacing:.06em}
   <div class="wrap">
     <div class="grid">
       <article class="item reveal">
-        <div class="shot"><img src="pics/photos/mariage-pacs-etreinte.webp" alt="Un couple s'enlace en riant dans un jardin lors de leur PACS" width="975" height="1300" loading="lazy"></div>
+        <div class="shot"><picture><source type="image/avif" srcset="pics/photos/mariage-pacs-etreinte-400.avif 400w, pics/photos/mariage-pacs-etreinte-700.avif 700w, pics/photos/mariage-pacs-etreinte-900.avif 900w" sizes="(max-width:560px) calc(100vw - 2.5rem), (max-width:960px) 45vw, 340px"><source type="image/webp" srcset="pics/photos/mariage-pacs-etreinte-400.webp 400w, pics/photos/mariage-pacs-etreinte-700.webp 700w, pics/photos/mariage-pacs-etreinte-900.webp 900w" sizes="(max-width:560px) calc(100vw - 2.5rem), (max-width:960px) 45vw, 340px"><img src="pics/photos/mariage-pacs-etreinte-700.webp" alt="Un couple s'enlace en riant dans un jardin lors de leur PACS" width="700" height="933" loading="lazy" decoding="async"></picture></div>
         <span class="kicker">Portfolio</span>
         <h3 class="serif">Mariage &amp; PACS</h3>
         <p>Des préparatifs à la dernière danse, votre union racontée avec douceur et spontanéité.</p>
       </article>
       <article class="item reveal">
-        <div class="shot"><img src="pics/photos/evenement-concert-rap.webp" alt="Un rappeur chante sous les projecteurs lors d'un showcase à l'Ozone" width="975" height="1300" loading="lazy"></div>
+        <div class="shot"><picture><source type="image/avif" srcset="pics/photos/evenement-concert-rap-400.avif 400w, pics/photos/evenement-concert-rap-700.avif 700w, pics/photos/evenement-concert-rap-900.avif 900w" sizes="(max-width:560px) calc(100vw - 2.5rem), (max-width:960px) 45vw, 340px"><source type="image/webp" srcset="pics/photos/evenement-concert-rap-400.webp 400w, pics/photos/evenement-concert-rap-700.webp 700w, pics/photos/evenement-concert-rap-900.webp 900w" sizes="(max-width:560px) calc(100vw - 2.5rem), (max-width:960px) 45vw, 340px"><img src="pics/photos/evenement-concert-rap-700.webp" alt="Un rappeur chante sous les projecteurs lors d'un showcase à l'Ozone" width="700" height="933" loading="lazy" decoding="async"></picture></div>
         <span class="kicker">Portfolio</span>
         <h3 class="serif">Événementiel</h3>
         <p>Concerts, festivals, soirées, braderie : l'énergie de vos événements, du début à la fin.</p>
       </article>
       <article class="item reveal">
-        <div class="shot"><img src="pics/photos/pro-famille-flamme.webp" alt="Deux membres de l'équipe de La famille Flamme échangent dans leur showroom" width="975" height="1300" loading="lazy"></div>
+        <div class="shot"><picture><source type="image/avif" srcset="pics/photos/pro-famille-flamme-400.avif 400w, pics/photos/pro-famille-flamme-700.avif 700w, pics/photos/pro-famille-flamme-900.avif 900w" sizes="(max-width:560px) calc(100vw - 2.5rem), (max-width:960px) 45vw, 340px"><source type="image/webp" srcset="pics/photos/pro-famille-flamme-400.webp 400w, pics/photos/pro-famille-flamme-700.webp 700w, pics/photos/pro-famille-flamme-900.webp 900w" sizes="(max-width:560px) calc(100vw - 2.5rem), (max-width:960px) 45vw, 340px"><img src="pics/photos/pro-famille-flamme-700.webp" alt="Deux membres de l'équipe de La famille Flamme échangent dans leur showroom" width="700" height="933" loading="lazy" decoding="async"></picture></div>
         <span class="kicker">Portfolio</span>
         <h3 class="serif">Professionnels</h3>
         <p>Entreprises, commerces, artisans : vos équipes et vos lieux, pour votre site et vos réseaux.</p>
@@ -256,7 +262,7 @@ footer small{font-size:.8rem;letter-spacing:.06em}
 </div>
 
 <section class="band" style="margin-top:4rem">
-  <img src="pics/photos/band-feux-artifice.webp" alt="" width="2200" height="1467" loading="lazy">
+  <picture><source type="image/avif" srcset="pics/photos/band-feux-artifice-800.avif 800w, pics/photos/band-feux-artifice-1400.avif 1400w, pics/photos/band-feux-artifice-2016.avif 2016w" sizes="100vw"><source type="image/webp" srcset="pics/photos/band-feux-artifice-800.webp 800w, pics/photos/band-feux-artifice-1400.webp 1400w, pics/photos/band-feux-artifice-2016.webp 2016w" sizes="100vw"><img src="pics/photos/band-feux-artifice-1400.webp" alt="" width="1400" height="933" loading="lazy" decoding="async"></picture>
   <p class="serif reveal">Vivez pleinement votre journée, je m'occupe de préserver vos souvenirs.</p>
 </section>
 
@@ -264,19 +270,19 @@ footer small{font-size:.8rem;letter-spacing:.06em}
   <div class="wrap">
     <h2 class="serif reveal">Le jour J, du premier au dernier instant</h2>
     <div class="step reveal">
-      <div class="shot"><img src="pics/photos/jourj-preparatifs.webp" alt="Deux fauteuils en rotin et des herbes de la pampa dans une salle de mariage" width="1400" height="1050" loading="lazy"></div>
+      <div class="shot"><picture><source type="image/avif" srcset="pics/photos/jourj-preparatifs-500.avif 500w, pics/photos/jourj-preparatifs-800.avif 800w, pics/photos/jourj-preparatifs-1100.avif 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><source type="image/webp" srcset="pics/photos/jourj-preparatifs-500.webp 500w, pics/photos/jourj-preparatifs-800.webp 800w, pics/photos/jourj-preparatifs-1100.webp 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><img src="pics/photos/jourj-preparatifs-800.webp" alt="Deux fauteuils en rotin et des herbes de la pampa dans une salle de mariage" width="800" height="600" loading="lazy" decoding="async"></picture></div>
       <div><span class="num">01</span><br><h3 class="serif">Préparatifs</h3><p style="margin-top:1.2rem">La décoration qui prend forme, les derniers ajustements, les émotions qui montent. Ces instants discrets donnent le ton de toute la journée.</p></div>
     </div>
     <div class="step reveal">
-      <div class="shot"><img src="pics/photos/jourj-ceremonie.webp" alt="Un jeune homme embrasse sa compagne sur la joue, tous deux souriants" width="1400" height="1050" loading="lazy"></div>
+      <div class="shot"><picture><source type="image/avif" srcset="pics/photos/jourj-ceremonie-500.avif 500w, pics/photos/jourj-ceremonie-800.avif 800w, pics/photos/jourj-ceremonie-1100.avif 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><source type="image/webp" srcset="pics/photos/jourj-ceremonie-500.webp 500w, pics/photos/jourj-ceremonie-800.webp 800w, pics/photos/jourj-ceremonie-1100.webp 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><img src="pics/photos/jourj-ceremonie-800.webp" alt="Un jeune homme embrasse sa compagne sur la joue, tous deux souriants" width="800" height="600" loading="lazy" decoding="async"></picture></div>
       <div><span class="num">02</span><br><h3 class="serif">Cérémonie</h3><p style="margin-top:1.2rem">Les regards, les mains qui tremblent, les larmes de joie. Je reste en retrait pour ne rien perturber et ne rien manquer.</p></div>
     </div>
     <div class="step reveal">
-      <div class="shot"><img src="pics/photos/jourj-reception.webp" alt="Table ronde dressée avec verres, chaises transparentes et bouquets de pampa" width="1400" height="1050" loading="lazy"></div>
+      <div class="shot"><picture><source type="image/avif" srcset="pics/photos/jourj-reception-500.avif 500w, pics/photos/jourj-reception-800.avif 800w, pics/photos/jourj-reception-1100.avif 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><source type="image/webp" srcset="pics/photos/jourj-reception-500.webp 500w, pics/photos/jourj-reception-800.webp 800w, pics/photos/jourj-reception-1100.webp 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><img src="pics/photos/jourj-reception-800.webp" alt="Table ronde dressée avec verres, chaises transparentes et bouquets de pampa" width="800" height="600" loading="lazy" decoding="async"></picture></div>
       <div><span class="num">03</span><br><h3 class="serif">Réception</h3><p style="margin-top:1.2rem">Vos proches, les retrouvailles, les détails que vous avez choisis avec soin. Tout ce qui fait l'ambiance de votre fête.</p></div>
     </div>
     <div class="step reveal">
-      <div class="shot"><img src="pics/photos/jourj-soiree.webp" alt="Un couple découpe une pièce montée en riant" width="1400" height="1050" loading="lazy"></div>
+      <div class="shot"><picture><source type="image/avif" srcset="pics/photos/jourj-soiree-500.avif 500w, pics/photos/jourj-soiree-800.avif 800w, pics/photos/jourj-soiree-1100.avif 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><source type="image/webp" srcset="pics/photos/jourj-soiree-500.webp 500w, pics/photos/jourj-soiree-800.webp 800w, pics/photos/jourj-soiree-1100.webp 1100w" sizes="(max-width:960px) calc(100vw - 4rem), 440px"><img src="pics/photos/jourj-soiree-800.webp" alt="Un couple découpe une pièce montée en riant" width="800" height="600" loading="lazy" decoding="async"></picture></div>
       <div><span class="num">04</span><br><h3 class="serif">Soirée</h3><p style="margin-top:1.2rem">Le gâteau, les éclats de rire, la piste qui s'enflamme. L'énergie de la nuit, capturée sur le vif.</p></div>
     </div>
   </div>
@@ -284,7 +290,7 @@ footer small{font-size:.8rem;letter-spacing:.06em}
 
 <section class="about" id="apropos" style="background:var(--sand)">
   <div class="wrap">
-    <img class="logo-big reveal" src="pics/logo-dark.png" alt="" width="800" height="547">
+    <picture class="logo-big reveal"><source type="image/avif" srcset="pics/logo-360.avif 360w, pics/logo-680.avif 680w" sizes="340px"><img src="pics/logo-680.webp" srcset="pics/logo-360.webp 360w, pics/logo-680.webp 680w" sizes="340px" alt="" width="680" height="465" loading="lazy" decoding="async"></picture>
     <div class="reveal">
       <span class="kicker">À propos</span>
       <h2 class="serif">Moi, c'est Jover</h2>
@@ -299,18 +305,18 @@ footer small{font-size:.8rem;letter-spacing:.06em}
     <h2 class="serif reveal">Vos histoires en images</h2>
     <p class="sub reveal">Quelques moments capturés ces derniers mois</p>
     <div class="grid reveal">
-      <figure><div class="shot"><img src="pics/photos/galerie-braderie-fanfare.webp" alt="Une fanfare joue au milieu de la foule" width="900" height="900" loading="lazy"></div><figcaption>Braderie de Lille</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-24h-mans-moto.webp" alt="Une moto de course passe devant la ligne des stands" width="900" height="900" loading="lazy"></div><figcaption>24 Heures Motos, Le Mans</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-ephemere-trio.webp" alt="Deux festivaliers en chapeaux de paille sourient à l'objectif" width="900" height="900" loading="lazy"></div><figcaption>Festival L'Éphémère</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-concert-rouge.webp" alt="Un rappeur chante sous une lumière rouge et rose" width="900" height="900" loading="lazy"></div><figcaption>Showcase à l'Ozone</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-festival-scene.webp" alt="Une chanteuse sur scène en plein air au Festival des producteurs" width="900" height="900" loading="lazy"></div><figcaption>Festival des producteurs</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-atelier-velo.webp" alt="Un mécanicien répare une roue de vélo dans son atelier" width="900" height="900" loading="lazy"></div><figcaption>Atelier Ours Roux</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-pacs-amies.webp" alt="Un groupe d'amies sourit sur un balcon lors d'un PACS" width="900" height="900" loading="lazy"></div><figcaption>PACS</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-ozone-etincelles.webp" alt="Un présentoir de bouteilles avec des cierges magiques dans une boîte de nuit" width="900" height="900" loading="lazy"></div><figcaption>Soirée à l'Ozone</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-barbier.webp" alt="Un fauteuil de barbier vintage en cuir noir" width="900" height="900" loading="lazy"></div><figcaption>Barber at work</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-guinguette.webp" alt="Trois amis déguisés en hippies font le signe de la paix" width="900" height="900" loading="lazy"></div><figcaption>Fête années 80</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-selfie-foule.webp" alt="Un artiste fait un selfie avec la foule depuis la scène" width="900" height="900" loading="lazy"></div><figcaption>Showcase à l'Ozone</figcaption></figure>
-      <figure><div class="shot"><img src="pics/photos/galerie-lille-beffroi.webp" alt="Le beffroi de la Chambre de commerce de Lille au coucher du soleil" width="900" height="900" loading="lazy"></div><figcaption>Lille</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-braderie-fanfare-360.avif 360w, pics/photos/galerie-braderie-fanfare-600.avif 600w, pics/photos/galerie-braderie-fanfare-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-braderie-fanfare-360.webp 360w, pics/photos/galerie-braderie-fanfare-600.webp 600w, pics/photos/galerie-braderie-fanfare-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-braderie-fanfare-600.webp" alt="Une fanfare joue au milieu de la foule" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Braderie de Lille</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-24h-mans-moto-360.avif 360w, pics/photos/galerie-24h-mans-moto-600.avif 600w, pics/photos/galerie-24h-mans-moto-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-24h-mans-moto-360.webp 360w, pics/photos/galerie-24h-mans-moto-600.webp 600w, pics/photos/galerie-24h-mans-moto-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-24h-mans-moto-600.webp" alt="Une moto de course passe devant la ligne des stands" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>24 Heures Motos, Le Mans</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-ephemere-trio-360.avif 360w, pics/photos/galerie-ephemere-trio-600.avif 600w, pics/photos/galerie-ephemere-trio-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-ephemere-trio-360.webp 360w, pics/photos/galerie-ephemere-trio-600.webp 600w, pics/photos/galerie-ephemere-trio-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-ephemere-trio-600.webp" alt="Deux festivaliers en chapeaux de paille sourient à l'objectif" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Festival L'Éphémère</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-concert-rouge-360.avif 360w, pics/photos/galerie-concert-rouge-600.avif 600w, pics/photos/galerie-concert-rouge-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-concert-rouge-360.webp 360w, pics/photos/galerie-concert-rouge-600.webp 600w, pics/photos/galerie-concert-rouge-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-concert-rouge-600.webp" alt="Un rappeur chante sous une lumière rouge et rose" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Showcase à l'Ozone</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-festival-scene-360.avif 360w, pics/photos/galerie-festival-scene-600.avif 600w, pics/photos/galerie-festival-scene-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-festival-scene-360.webp 360w, pics/photos/galerie-festival-scene-600.webp 600w, pics/photos/galerie-festival-scene-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-festival-scene-600.webp" alt="Une chanteuse sur scène en plein air au Festival des producteurs" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Festival des producteurs</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-atelier-velo-360.avif 360w, pics/photos/galerie-atelier-velo-600.avif 600w, pics/photos/galerie-atelier-velo-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-atelier-velo-360.webp 360w, pics/photos/galerie-atelier-velo-600.webp 600w, pics/photos/galerie-atelier-velo-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-atelier-velo-600.webp" alt="Un mécanicien répare une roue de vélo dans son atelier" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Atelier Ours Roux</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-pacs-amies-360.avif 360w, pics/photos/galerie-pacs-amies-600.avif 600w, pics/photos/galerie-pacs-amies-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-pacs-amies-360.webp 360w, pics/photos/galerie-pacs-amies-600.webp 600w, pics/photos/galerie-pacs-amies-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-pacs-amies-600.webp" alt="Un groupe d'amies sourit sur un balcon lors d'un PACS" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>PACS</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-ozone-etincelles-360.avif 360w, pics/photos/galerie-ozone-etincelles-600.avif 600w, pics/photos/galerie-ozone-etincelles-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-ozone-etincelles-360.webp 360w, pics/photos/galerie-ozone-etincelles-600.webp 600w, pics/photos/galerie-ozone-etincelles-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-ozone-etincelles-600.webp" alt="Un présentoir de bouteilles avec des cierges magiques dans une boîte de nuit" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Soirée à l'Ozone</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-barbier-360.avif 360w, pics/photos/galerie-barbier-600.avif 600w, pics/photos/galerie-barbier-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-barbier-360.webp 360w, pics/photos/galerie-barbier-600.webp 600w, pics/photos/galerie-barbier-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-barbier-600.webp" alt="Un fauteuil de barbier vintage en cuir noir" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Barber at work</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-guinguette-360.avif 360w, pics/photos/galerie-guinguette-600.avif 600w, pics/photos/galerie-guinguette-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-guinguette-360.webp 360w, pics/photos/galerie-guinguette-600.webp 600w, pics/photos/galerie-guinguette-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-guinguette-600.webp" alt="Trois amis déguisés en hippies font le signe de la paix" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Fête années 80</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-selfie-foule-360.avif 360w, pics/photos/galerie-selfie-foule-600.avif 600w, pics/photos/galerie-selfie-foule-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-selfie-foule-360.webp 360w, pics/photos/galerie-selfie-foule-600.webp 600w, pics/photos/galerie-selfie-foule-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-selfie-foule-600.webp" alt="Un artiste fait un selfie avec la foule depuis la scène" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Showcase à l'Ozone</figcaption></figure>
+      <figure><div class="shot"><picture><source type="image/avif" srcset="pics/photos/galerie-lille-beffroi-360.avif 360w, pics/photos/galerie-lille-beffroi-600.avif 600w, pics/photos/galerie-lille-beffroi-900.avif 900w" sizes="(max-width:960px) 45vw, 270px"><source type="image/webp" srcset="pics/photos/galerie-lille-beffroi-360.webp 360w, pics/photos/galerie-lille-beffroi-600.webp 600w, pics/photos/galerie-lille-beffroi-900.webp 900w" sizes="(max-width:960px) 45vw, 270px"><img src="pics/photos/galerie-lille-beffroi-600.webp" alt="Le beffroi de la Chambre de commerce de Lille au coucher du soleil" width="600" height="600" loading="lazy" decoding="async"></picture></div><figcaption>Lille</figcaption></figure>
     </div>
     <div class="more"><a class="btn" href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener">Suivre @jover.agency</a></div>
   </div>
@@ -327,7 +333,7 @@ footer small{font-size:.8rem;letter-spacing:.06em}
 
 <footer>
   <div class="wrap">
-    <img class="flogo" src="pics/logo-dark.png" alt="Jover" width="800" height="547">
+    <picture class="flogo"><source type="image/avif" srcset="pics/logo-180.avif 1x, pics/logo-360.avif 2x"><img src="pics/logo-180.webp" srcset="pics/logo-180.webp 1x, pics/logo-360.webp 2x" alt="Jover" width="180" height="123" loading="lazy" decoding="async"></picture>
     <div class="links">
       <a href="https://www.instagram.com/jover.agency/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg>@jover.agency</a>
       <a href="mailto:contact@jover.agency"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>contact@jover.agency</a>
@@ -337,16 +343,21 @@ footer small{font-size:.8rem;letter-spacing:.06em}
 </footer>
 
 <script>
+(function(){
   // menu mobile
-  const top=document.getElementById('top'),burger=top.querySelector('.burger');
-  burger.addEventListener('click',()=>{const o=top.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
-  top.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>{top.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+  var hdr=document.getElementById('top'),burger=hdr.querySelector('.burger');
+  burger.addEventListener('click',function(){var o=hdr.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  hdr.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open');burger.setAttribute('aria-expanded',false)})});
   // filet sous l'en-tête au défilement
-  addEventListener('scroll',()=>top.classList.toggle('scrolled',scrollY>10),{passive:true});
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>10)},{passive:true});
   // apparition des sections
-  const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
-  document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.01,rootMargin:'0px 0px -4% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('in')}); }
   document.getElementById('y').textContent=new Date().getFullYear();
+})();
 </script>
 </body>
 </html>

@@ -10,9 +10,9 @@ Site vitrine de Jover, photographe à Lille (mariage & PACS, événementiel, pro
 | Élément | Emplacement |
 |---|---|
 | Page unique (HTML + CSS + JS) | `index.html` |
-| Logo (gris, blanc), favicon | `pics/logo-dark.png`, `pics/logo-white.png`, `pics/favicon.png` |
+| Logo (180, 360, 680 px), favicon | `pics/logo-*.avif` / `.webp`, `pics/favicon-64.png`, `pics/apple-touch-icon.png` |
 | Portrait noir et blanc | `pics/jover.webp` |
-| Photos du site (WebP optimisées) | `pics/photos/` |
+| Photos du site (AVIF + WebP, 3 tailles chacune) | `pics/photos/<nom>-<largeur>.avif` / `.webp` |
 | Publication automatique | `.github/workflows/pages.yml` |
 
 ## Sections
@@ -64,3 +64,10 @@ Demander à Claude :
 Chaque envoi sur la branche `main` republie le site en une à deux minutes
 (GitHub → Settings → Pages → Source : **GitHub Actions** ; c'est le fichier
 `.github/workflows/pages.yml` qui publie le site).
+
+## Performance
+
+Chaque photo existe en 3 largeurs, en AVIF (prioritaire) et en WebP (secours).
+Le navigateur ne télécharge que la taille adaptée à l'écran (`<picture>` + `srcset`).
+Poids total de la page après défilement complet : environ 390 Ko sur ordinateur et 740 Ko sur mobile
+(contre environ 2 Mo avant optimisation).
